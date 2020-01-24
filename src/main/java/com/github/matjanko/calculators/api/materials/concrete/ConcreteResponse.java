@@ -11,7 +11,7 @@ import lombok.Setter;
  */
 
 @Getter
-@Setter(AccessLevel.PACKAGE)
+@Setter(AccessLevel.PUBLIC)
 @EqualsAndHashCode(onlyExplicitlyIncluded = true)
 public class ConcreteResponse {
 
@@ -25,6 +25,6 @@ public class ConcreteResponse {
     private double fctk5;
     private double fctk95;
     private double ecm;
-    private int weight;
+    private double weight;
 
 }
