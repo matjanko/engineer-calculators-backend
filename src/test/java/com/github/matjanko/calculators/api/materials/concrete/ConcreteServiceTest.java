@@ -25,7 +25,7 @@ public class ConcreteServiceTest {
     }
 
     @Test
-    public void getEurocodeClassesTest() {
+    public void getClassesNamesTest() {
         // given
         Set<String> expected = new LinkedHashSet<>(Arrays.asList(
                 "C12/15",
