@@ -165,6 +165,6 @@ public class ConcreteTest {
         // given
         Concrete concrete = new ConcreteImpl(fck, fckCube);
         // then
-        assertEquals(2500, concrete.getWeight());
+        assertEquals(2500, concrete.getWeight(), 0);
     }
 }
