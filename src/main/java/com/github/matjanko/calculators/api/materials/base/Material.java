@@ -1,4 +1,4 @@
-package com.github.matjanko.calculators.api.materials;
+package com.github.matjanko.calculators.api.materials.base;
 
 /**
  * @author matjanko

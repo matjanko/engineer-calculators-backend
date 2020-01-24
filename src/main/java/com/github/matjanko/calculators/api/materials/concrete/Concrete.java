@@ -1,6 +1,6 @@
 package com.github.matjanko.calculators.api.materials.concrete;
 
-import com.github.matjanko.calculators.api.materials.Material;
+import com.github.matjanko.calculators.api.materials.base.Material;
 
 /**
  * @author matjanko
