@@ -75,10 +75,10 @@ public class StructuralClassServiceTest {
             "45, XS2",
             "45, XS3"
     })
-    public void shouldReturnS3WhenConcreteCompressiveStrengthAndExposureClass(int strength, String exposureClass) {
+    public void shouldReturnS3WhenConcreteCompressiveStrengthAndExposureClass(int strength, ExposureClass exposureClass) {
         // given
         StructuralClass actual =
-                structuralClassService.getClass(ExposureClass.valueOf(exposureClass), strength, false, false, false);
+                structuralClassService.getClass(exposureClass, strength, false, false, false);
         // then
         assertEquals(StructuralClass.S3, actual);
     }
@@ -123,10 +123,10 @@ public class StructuralClassServiceTest {
             "45, XS3"
     })
     public void shouldReturnS1WhenConcreteCompressiveStrengthAndExposureClassAndSlabGeometryAndSpecialQualityControl(
-            int strength, String exposureClass) {
+            int strength, ExposureClass exposureClass) {
         // given
         StructuralClass actual =
-                structuralClassService.getClass(ExposureClass.valueOf(exposureClass), strength, false, true, true);
+                structuralClassService.getClass(exposureClass, strength, false, true, true);
         // then
         assertEquals(StructuralClass.S1, actual);
     }
@@ -153,10 +153,10 @@ public class StructuralClassServiceTest {
             "45, XS3"
     })
     public void shouldReturnS3WhenConcreteCompressiveStrengthAndExposureClassAndSlabGeometryAndSpecialQualityControlAndHundredYearsService(
-            int strength, String exposureClass) {
+            int strength, ExposureClass exposureClass) {
         // given
         StructuralClass actual =
-                structuralClassService.getClass(ExposureClass.valueOf(exposureClass), strength, true, true, true);
+                structuralClassService.getClass(exposureClass, strength, true, true, true);
         // then
         assertEquals(StructuralClass.S3, actual);
     }
@@ -182,10 +182,10 @@ public class StructuralClassServiceTest {
             "40, XS2",
             "40, XS3"
     })
-    public void shouldReturnS4WhenConcreteCompressiveStrengthAndExposureClass(int strength, String exposureClass) {
+    public void shouldReturnS4WhenConcreteCompressiveStrengthAndExposureClass(int strength, ExposureClass exposureClass) {
         // given
         StructuralClass actual =
-                structuralClassService.getClass(ExposureClass.valueOf(exposureClass), strength, false, false, false);
+                structuralClassService.getClass(exposureClass, strength, false, false, false);
         // then
         assertEquals(StructuralClass.S4, actual);
     }
@@ -212,10 +212,10 @@ public class StructuralClassServiceTest {
             "40, XS3"
     })
     public void shouldReturnS6WhenConcreteCompressiveStrengthAndExposureClassAndHundredYearsService(
-            int strength, String exposureClass) {
+            int strength, ExposureClass exposureClass) {
         // given
         StructuralClass actual =
-                structuralClassService.getClass(ExposureClass.valueOf(exposureClass), strength, true, false, false);
+                structuralClassService.getClass(exposureClass, strength, true, false, false);
         // then
         assertEquals(StructuralClass.S6, actual);
     }
@@ -242,10 +242,10 @@ public class StructuralClassServiceTest {
             "40, XS3"
     })
     public void shouldReturnS3WhenConcreteCompressiveStrengthAndExposureClassAndSlabGeometry(
-            int strength, String exposureClass) {
+            int strength, ExposureClass exposureClass) {
         // given
         StructuralClass actual =
-                structuralClassService.getClass(ExposureClass.valueOf(exposureClass), strength, false, true, false);
+                structuralClassService.getClass(exposureClass, strength, false, true, false);
         // then
         assertEquals(StructuralClass.S3, actual);
     }
@@ -272,10 +272,10 @@ public class StructuralClassServiceTest {
             "40, XS3"
     })
     public void shouldReturnS2WhenConcreteCompressiveStrengthAndExposureClassAndSlabGeometryAndSpecialQualityControl(
-            int strength, String exposureClass) {
+            int strength, ExposureClass exposureClass) {
         // given
         StructuralClass actual =
-                structuralClassService.getClass(ExposureClass.valueOf(exposureClass), strength, false, true, true);
+                structuralClassService.getClass(exposureClass, strength, false, true, true);
         // then
         assertEquals(StructuralClass.S2, actual);
     }
@@ -302,10 +302,10 @@ public class StructuralClassServiceTest {
             "40, XS3"
     })
     public void shouldReturnS4WhenConcreteCompressiveStrengthAndExposureClassAndSlabGeometryAndSpecialQualityControlAndHundredYearsService(
-            int strength, String exposureClass) {
+            int strength, ExposureClass exposureClass) {
         // given
         StructuralClass actual =
-                structuralClassService.getClass(ExposureClass.valueOf(exposureClass), strength, true, true, true);
+                structuralClassService.getClass(exposureClass, strength, true, true, true);
         // then
         assertEquals(StructuralClass.S4, actual);
     }
