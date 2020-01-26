@@ -14,13 +14,13 @@ import javax.validation.constraints.NotNull;
 @Getter @Setter
 public class CoverRequest {
 
-    @NotBlank
+    @NotBlank(message = "No concrete class given")
     private String concreteClass;
-    @NotBlank
+    @NotNull(message = "No aggregate size given")
     private Integer aggregateSize;
-    @NotNull
+    @NotNull(message = "No bar diameter given")
     private Integer barDiameter;
-    @NotBlank
+    @NotBlank(message = "No exposure class given")
     private String exposureClass;
 
     private boolean isHundredYearsService;
