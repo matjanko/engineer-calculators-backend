@@ -31,7 +31,7 @@ public class StructuralClassServiceTest {
     public void shouldReturnS6WhenHundredYearsService() {
         // given
         StructuralClass actual =
-                structuralClassService.getClass(ExposureClass.XC1, 30, true, false, false);
+                structuralClassService.getClass(ExposureClass.XC1, 25, true, false, false);
         // then
         assertEquals(StructuralClass.S6, actual);
     }
@@ -40,7 +40,7 @@ public class StructuralClassServiceTest {
     public void shouldReturnS3WhenSlabGeometry() {
         // given
         StructuralClass actual =
-                structuralClassService.getClass(ExposureClass.XC1, 30, false, true, false);
+                structuralClassService.getClass(ExposureClass.XC1, 25, false, true, false);
         // then
         assertEquals(StructuralClass.S3, actual);
     }
@@ -49,7 +49,7 @@ public class StructuralClassServiceTest {
     public void shouldReturnS3WhenSpecialQualityControl() {
         // given
         StructuralClass actual =
-                structuralClassService.getClass(ExposureClass.XC1, 30, false, false, true);
+                structuralClassService.getClass(ExposureClass.XC1, 25, false, false, true);
         // then
         assertEquals(StructuralClass.S3, actual);
     }
@@ -87,7 +87,7 @@ public class StructuralClassServiceTest {
     public void shouldReturnS2WhenSlabGeometryAndSpecialQualityControl() {
         // given
         StructuralClass actual =
-                structuralClassService.getClass(ExposureClass.XC1, 30, false, true, true);
+                structuralClassService.getClass(ExposureClass.XC1, 25, false, true, true);
         // then
         assertEquals(StructuralClass.S2, actual);
     }
@@ -96,7 +96,7 @@ public class StructuralClassServiceTest {
     public void shouldReturnS4WhenSlabGeometryAndSpecialQualityControlAndHundredYearsService() {
         // given
         StructuralClass actual =
-                structuralClassService.getClass(ExposureClass.XC1, 30, true, true, true);
+                structuralClassService.getClass(ExposureClass.XC1, 25, true, true, true);
         // then
         assertEquals(StructuralClass.S4, actual);
     }
