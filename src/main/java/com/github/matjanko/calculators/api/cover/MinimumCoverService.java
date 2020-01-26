@@ -10,7 +10,8 @@ import org.springframework.stereotype.Service;
 @Service
 public interface MinimumCoverService {
 
-    double getCoverByProtectionAgainstCorrosion(int barDiameter, int aggregateSize);
+    double getCoverBySafeTransmissionOfBondForces(int barDiameter, int aggregateSize);
 
-    double getCoverBySafeTransmissionOfBondForces(ExposureClass exposureClass, StructuralClass structuralClass);
+    double getCoverByProtectionAgainstCorrosion(ExposureClass exposureClass, StructuralClass structuralClass);
+
 }
