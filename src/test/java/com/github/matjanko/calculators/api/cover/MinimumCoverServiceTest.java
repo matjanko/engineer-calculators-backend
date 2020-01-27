@@ -1,4 +1,4 @@
-package com.github.matjanko.calculators.api.materials.concrete;
+package com.github.matjanko.calculators.api.cover;
 
 import com.github.matjanko.calculators.api.cover.ExposureClass;
 import com.github.matjanko.calculators.api.cover.MinimumCoverService;
