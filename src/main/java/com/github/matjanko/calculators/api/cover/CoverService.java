@@ -12,6 +12,8 @@ import javax.validation.constraints.NotNull;
 @Service
 public interface CoverService {
 
-    CoverResponse calculate(@NotNull CoverRequest coverRequest);
+    CoverResponse getCalculation(@NotNull CoverRequest coverRequest);
+
+    int getNominalCover(@NotNull CoverRequest coverRequest);
 
 }
