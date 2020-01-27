@@ -14,6 +14,4 @@ public interface CoverService {
 
     CoverResponse getCalculation(@NotNull CoverRequest coverRequest);
 
-    int getNominalCover(@NotNull CoverRequest coverRequest);
-
 }
