@@ -1,8 +1,5 @@
 package com.github.matjanko.calculators.api.cover;
 
-import com.github.matjanko.calculators.api.cover.ExposureClass;
-import com.github.matjanko.calculators.api.cover.MinimumCoverService;
-import com.github.matjanko.calculators.api.cover.StructuralClass;
 import com.github.matjanko.calculators.api.cover.impl.MinimumCoverServiceImpl;
 import junitparams.JUnitParamsRunner;
 import junitparams.Parameters;
