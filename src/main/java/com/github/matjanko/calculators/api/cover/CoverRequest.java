@@ -1,9 +1,9 @@
 package com.github.matjanko.calculators.api.cover;
 
+import com.github.matjanko.calculators.api.materials.concrete.ConcreteClass;
 import lombok.Getter;
 import lombok.Setter;
 
-import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.NotNull;
 
 /**
@@ -14,14 +14,14 @@ import javax.validation.constraints.NotNull;
 @Getter @Setter
 public class CoverRequest {
 
-    @NotBlank(message = "No concrete class given")
-    private String concreteClass;
+    @NotNull(message = "No concrete class given")
+    private ConcreteClass concreteClass;
     @NotNull(message = "No aggregate size given")
     private Integer aggregateSize;
     @NotNull(message = "No bar diameter given")
     private Integer barDiameter;
-    @NotBlank(message = "No exposure class given")
-    private String exposureClass;
+    @NotNull(message = "No exposure class given")
+    private ExposureClass exposureClass;
 
     private boolean isHundredYearsService;
     private boolean isSlabGeometry;

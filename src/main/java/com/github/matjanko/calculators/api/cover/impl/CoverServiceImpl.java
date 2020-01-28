@@ -21,7 +21,7 @@ public class CoverServiceImpl implements CoverService {
 
     @Override
     public CoverResponse getCalculation(@NotNull CoverRequest coverRequest) {
-        ExposureClass exposureClass = ExposureClass.valueOf(coverRequest.getExposureClass());
+        ExposureClass exposureClass = coverRequest.getExposureClass();
         StructuralClass structuralClass = getStructuralClass(exposureClass, coverRequest);
         int bondMinCover = getBondMinCover(coverRequest);
         int environmentalMinCover = getEnvironmentalMinCover(exposureClass, structuralClass);
@@ -41,13 +41,8 @@ public class CoverServiceImpl implements CoverService {
     }
 
     private StructuralClass getStructuralClass(ExposureClass exp, CoverRequest req) {
-        return structuralClassService.getClass(exp, getConcreteCompressiveStrength(req),
+        return structuralClassService.getClass(exp, req.getConcreteClass().getFck(),
                 req.isHundredYearsService(), req.isSlabGeometry(), req.isSpecialQualityControl());
-    }
-
-    private int getConcreteCompressiveStrength(CoverRequest req) {
-        String[] arr = req.getConcreteClass().split("[C/]+");
-        return Integer.parseInt(arr[0]);
     }
 
     private int getBondMinCover(CoverRequest req) {
