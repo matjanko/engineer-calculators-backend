@@ -1,25 +1,26 @@
 package com.github.matjanko.calculators.api.materials.concrete.impl;
 
 import com.github.matjanko.calculators.api.materials.concrete.Concrete;
+import com.github.matjanko.calculators.api.materials.concrete.ConcreteClass;
 import lombok.EqualsAndHashCode;
-import lombok.RequiredArgsConstructor;
-
-import javax.validation.constraints.Size;
 
 /**
  * @author matjanko
  *
  */
 
-@RequiredArgsConstructor
 @EqualsAndHashCode
 public class ConcreteImpl implements Concrete {
 
-    @Size(max = 3)
-    private final int fck;
-    @Size(max = 3)
-    private final int fckCube;
+    private final ConcreteClass concreteClass;
+    private int fck;
+    private int fckCube;
 
+    public ConcreteImpl(ConcreteClass concreteClass) {
+        this.concreteClass = concreteClass;
+        fck = concreteClass.getFck();
+        fckCube = concreteClass.getFckCube();
+    }
 
     @Override
     public int getFck() {
@@ -68,10 +69,7 @@ public class ConcreteImpl implements Concrete {
 
     @Override
     public String getName() {
-        return "C" +
-                fck +
-                "/" +
-                fckCube;
+        return concreteClass.getName();
     }
 
     @Override
