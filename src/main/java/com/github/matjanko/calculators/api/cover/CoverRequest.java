@@ -1,5 +1,6 @@
 package com.github.matjanko.calculators.api.cover;
 
+import com.github.matjanko.calculators.api.exposure.ExposureClass;
 import com.github.matjanko.calculators.api.materials.concrete.ConcreteClass;
 import lombok.Getter;
 import lombok.Setter;

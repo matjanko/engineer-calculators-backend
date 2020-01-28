@@ -1,6 +1,6 @@
 package com.github.matjanko.calculators.api.cover.impl;
 
-import com.github.matjanko.calculators.api.cover.ExposureClass;
+import com.github.matjanko.calculators.api.exposure.ExposureClass;
 import com.github.matjanko.calculators.api.cover.StructuralClass;
 import com.github.matjanko.calculators.api.cover.StructuralClassService;
 import org.springframework.stereotype.Service;
@@ -8,7 +8,7 @@ import org.springframework.stereotype.Service;
 import java.util.HashMap;
 import java.util.Map;
 
-import static com.github.matjanko.calculators.api.cover.ExposureClass.*;
+import static com.github.matjanko.calculators.api.exposure.ExposureClass.*;
 
 /**
  * @author matjanko

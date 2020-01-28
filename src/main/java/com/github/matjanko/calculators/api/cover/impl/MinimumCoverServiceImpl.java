@@ -1,13 +1,13 @@
 package com.github.matjanko.calculators.api.cover.impl;
 
-import com.github.matjanko.calculators.api.cover.ExposureClass;
+import com.github.matjanko.calculators.api.exposure.ExposureClass;
 import com.github.matjanko.calculators.api.cover.MinimumCoverService;
 import com.github.matjanko.calculators.api.cover.StructuralClass;
 import org.springframework.stereotype.Service;
 
 import java.util.*;
 
-import static com.github.matjanko.calculators.api.cover.ExposureClass.*;
+import static com.github.matjanko.calculators.api.exposure.ExposureClass.*;
 
 /**
  * @author matjanko

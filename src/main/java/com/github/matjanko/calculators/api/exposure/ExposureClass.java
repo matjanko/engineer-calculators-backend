@@ -1,4 +1,4 @@
-package com.github.matjanko.calculators.api.cover;
+package com.github.matjanko.calculators.api.exposure;
 
 /**
  * @author matjanko

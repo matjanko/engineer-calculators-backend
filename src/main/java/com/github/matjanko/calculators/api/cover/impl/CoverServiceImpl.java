@@ -1,6 +1,7 @@
 package com.github.matjanko.calculators.api.cover.impl;
 
 import com.github.matjanko.calculators.api.cover.*;
+import com.github.matjanko.calculators.api.exposure.ExposureClass;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 
