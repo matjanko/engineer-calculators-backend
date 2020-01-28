@@ -4,8 +4,9 @@ import com.github.matjanko.calculators.api.materials.concrete.Concrete;
 import com.github.matjanko.calculators.api.materials.concrete.ConcreteClass;
 import com.github.matjanko.calculators.api.materials.concrete.impl.ConcreteImpl;
 
-import java.util.LinkedList;
 import java.util.List;
+import java.util.stream.Collectors;
+import java.util.stream.Stream;
 
 /**
  * @author matjanko
@@ -16,12 +17,8 @@ import java.util.List;
 public class Materials {
 
     public static List<Concrete> getConcretes() {
-        List<Concrete> concretes = new LinkedList<>();
-
-        for (ConcreteClass concreteClass : ConcreteClass.values()) {
-            concretes.add(new ConcreteImpl(concreteClass));
-        }
-
-        return concretes;
+        return Stream.of(ConcreteClass.values())
+                .map(ConcreteImpl::new)
+                .collect(Collectors.toList());
     }
 }
