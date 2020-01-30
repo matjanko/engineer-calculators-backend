@@ -4,6 +4,7 @@ import lombok.AccessLevel;
 import lombok.EqualsAndHashCode;
 import lombok.Getter;
 import lombok.Setter;
+import org.springframework.hateoas.RepresentationModel;
 
 /**
  * @author matjanko
@@ -12,8 +13,8 @@ import lombok.Setter;
 
 @Getter
 @Setter(AccessLevel.PUBLIC)
-@EqualsAndHashCode(onlyExplicitlyIncluded = true)
-public class ConcreteResponse {
+@EqualsAndHashCode(onlyExplicitlyIncluded = true, callSuper = false)
+public class ConcreteResponse extends RepresentationModel<ConcreteResponse> {
 
     @EqualsAndHashCode.Include
     private String name;
