@@ -10,6 +10,8 @@ import javax.validation.constraints.NotBlank;
 import java.util.List;
 import java.util.Set;
 
+import static org.springframework.hateoas.server.mvc.WebMvcLinkBuilder.*;
+
 /**
  * @author matjanko
  *
@@ -24,7 +26,12 @@ public class ConcreteController {
 
     @GetMapping
     public ResponseEntity<List<ConcreteResponse>> getAllConcretes() {
-        return new ResponseEntity<>(concreteService.getAll(), HttpStatus.OK);
+        List<ConcreteResponse> concretes = concreteService.getAll();
+
+        concretes.forEach(c -> c.add(linkTo(methodOn(ConcreteController.class).getByClassName(c.getName()))
+                .withSelfRel()));
+
+        return new ResponseEntity<>(concretes, HttpStatus.OK);
     }
 
     @RequestMapping(method = RequestMethod.GET, params = "className")
