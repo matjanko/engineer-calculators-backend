@@ -38,6 +38,7 @@ public class ConcreteController {
     public ResponseEntity<?> getByClassName(@NotBlank @RequestParam String className) {
         try {
             ConcreteResponse concrete = concreteService.getByName(className);
+            concrete.add(linkTo(methodOn(ConcreteController.class).getAllConcretes()).withSelfRel());
             return new ResponseEntity<>(concrete, HttpStatus.OK);
         } catch (MaterialNotFoundException e) {
             return new ResponseEntity<>(e.getMessage(), HttpStatus.NOT_FOUND);
